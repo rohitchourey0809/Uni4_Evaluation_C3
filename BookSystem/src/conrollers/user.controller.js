@@ -13,4 +13,26 @@ router.post("/",async function (req, res){
    }
 })
 
+router.post("/",
+body("firstName")
+.trim()
+.not()
+.isEmpty()
+.islength({min:3},{max:30}))
+
+router.post("/",
+body("lastName")
+.trim()
+.not()
+.isEmpty()
+.islength({min:3},{max:30}))
+
+router.post("/",
+body("age")
+.trim()
+.not()
+.isEmpty()
+.islength({min:1},{max:150}))
+
+
 module.exports = router ;
